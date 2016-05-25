@@ -21,13 +21,13 @@ describe('app', function ()
             expect(exercise.findAlmostMax([2, 3, 4])).toBe(3);
         });
         it('should return second greatest number', function () {
-            expect(exercise.findAlmostMax([50, 40, 30, 10])).toBe(50);
+            expect(exercise.findAlmostMax([50, 40, 30, 10])).toBe(40);
         });
         it('string should be omnitted', function () {
-            expect(exercise.findAlmostMax([50, 'str', 30, 10])).toBe('str');
+            expect(exercise.findAlmostMax([50, 'str', 30, 10])).toBe(30);
         });
         it('empty array should return false', function () {
-            expect(exercise.findAlmostMax([])).toEqual(true);
+            expect(exercise.findAlmostMax([])).toEqual(false);
         });
         it('array of string should return false', function () {
             expect(exercise.findAlmostMax(['cat', 'kot'])).toEqual(false);
